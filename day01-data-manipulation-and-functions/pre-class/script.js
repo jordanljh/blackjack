@@ -7,8 +7,8 @@ var main = function (input) {
   var pi = 3.14,
     radius = 4;
   var area = pi * radius * radius;
-  var name = "Chicken";
-  var myOutputValue = "wow hello " + input;
+  var name = input;
+  var myOutputValue = `wow hello ${name}, the area is ${area}`;
   //return convertKmToMiles(input);
   return myOutputValue;
 };
