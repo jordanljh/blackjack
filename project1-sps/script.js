@@ -21,35 +21,70 @@ var main = function (input) {
   } else {
     computer = "stone";
   }
-  var myOutputValue = `Player: ${input}, Computer: ${computer}, Result: `;
+  var myOutputValue =
+    `Computer chose ${computer}.` +
+    "<br>" +
+    `You chose ${input}.` +
+    "<br>" +
+    "<br>" +
+    `You `;
 
   // check results
   if (input == "scissors") {
     if (computer == "scissors") {
-      myOutputValue += "Draw.";
+      myOutputValue += "draw!";
     } else if (computer == "paper") {
-      myOutputValue += "Win.";
+      myOutputValue += "win!";
     } else {
-      myOutputValue += "Lose.";
+      myOutputValue += "lose!";
     }
   } else if (input == "paper") {
     if (computer == "paper") {
-      myOutputValue += "Draw.";
+      myOutputValue += "draw!";
     } else if (computer == "stone") {
-      myOutputValue += "Win.";
+      myOutputValue += "win!";
     } else {
-      myOutputValue += "Lose.";
+      myOutputValue += "lose!";
     }
   } else if (input == "stone") {
     if (computer == "stone") {
-      myOutputValue += "Draw.";
+      myOutputValue += "draw!";
     } else if (computer == "scissors") {
-      myOutputValue += "Win.";
+      myOutputValue += "Win!";
     } else {
-      myOutputValue += "Lose.";
+      myOutputValue += "lose!";
+    }
+  } else if (input == "reversed scissors") {
+    if (computer == "scissors") {
+      myOutputValue += "draw!";
+    } else if (computer == "stone") {
+      myOutputValue += "Win!";
+    } else {
+      myOutputValue += "lose!";
+    }
+  } else if (input == "reversed paper") {
+    if (computer == "paper") {
+      myOutputValue += "draw!";
+    } else if (computer == "scissors") {
+      myOutputValue += "Win!";
+    } else {
+      myOutputValue += "lose!";
+    }
+  } else if (input == "reversed stone") {
+    if (computer == "stone") {
+      myOutputValue += "draw!";
+    } else if (computer == "paper") {
+      myOutputValue += "Win!";
+    } else {
+      myOutputValue += "lose!";
     }
   } else {
     return `Please choose between scissors, paper and stone.`;
   }
+  myOutputValue =
+    myOutputValue +
+    "<br>" +
+    "<br>" +
+    `Now you can type scissors, paper or stone to play another round!`;
   return myOutputValue;
 };
