@@ -9,7 +9,7 @@ var roll3Number = function () {
   return chosenNumber;
 };
 
-let userName = 0;
+let userName = "";
 let gameState = "start";
 let totalGames = 0;
 let totalWin = 0;
