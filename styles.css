@@ -12,7 +12,7 @@ body {
   font-family: sans-serif;
   margin-left: 30px;
   margin-right: 30px;
-  background-color: #e0e0e0;
+  background-color: black;
 }
 
 nav {
@@ -54,23 +54,27 @@ nav ul li a {
 
 #header {
   text-align: center;
+  color: white;
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: rgb(36, 66, 38);
   margin: 40px auto;
-  max-width: 800px;
-  padding: 38px 31px;
-  border-radius: 8px;
+  max-width: 1230px;
+  min-width: 1230px;
+  padding: 30px;
+  border-radius: 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: 5px solid white;
+  display: inline-block;
 }
 
 input {
   font-size: 21px;
   line-height: 33px;
-  margin: 0 0 23px 0;
-  padding: 0 9px;
-  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  width: 20%;
 }
 
 button {
@@ -82,9 +86,10 @@ button {
 
 .output-div {
   background-color: lightgrey;
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
-  width: 100%;
+  width: 30%;
+  display: inline-block;
 }
 
 hr {
@@ -180,4 +185,183 @@ hr {
 
 .justify-content-center {
   justify-content: center;
+}
+
+#blackjack {
+  background-color: #ffffff;
+  margin: 0px 0px 0px 30px;
+  padding: 13px 0px 13px 0px;
+  width: 58%;
+  height: 135px;
+  font-size: 88px;
+  float: left;
+  font-family: Georgia, serif;
+  letter-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  color: #ffffff;
+  background: black;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ce1019,
+    0 0 30px #ce1019, 0 0 40px #ce1019, 0 0 55px #ce1019, 0 0 75px #ce1019;
+  text-align: center;
+  /* border: 5px double #0494f4; */
+  border: 5px double white;
+}
+
+#credit {
+  background-color: black;
+  color: white;
+  margin: 0px 20px 0px 0px;
+  padding: 10px;
+  width: 20%;
+  margin-left: auto;
+  font-size: 23px;
+  height: 135px;
+  text-align: center;
+  /* border: 5px solid gold; */
+  border: 5px solid white;
+}
+
+#bet-button {
+  /* background-color: rgb(8, 112, 138); */
+  background-color: white;
+  color: black;
+  font-size: 21px;
+  line-height: 28px;
+  margin: 0 0 0 0;
+  padding: 0 6px;
+  margin-left: auto;
+}
+
+#input-field {
+  font-size: 21px;
+  line-height: 5px;
+  margin: 0px 1px 0px 0px;
+  padding: 6px;
+  width: 15%;
+  margin-left: 907px;
+  text-align: center;
+}
+
+#restart-button {
+  /* background-color: rgb(8, 112, 138); */
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  line-height: 35px;
+  margin: 0 0px 0px 0;
+  padding: 0 6px;
+  margin-left: 1040px;
+  text-align: center;
+}
+
+#instructions {
+  background-color: black;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 23px;
+  color: white;
+  margin: 25px 25px 25px 30px;
+  padding: 20px;
+  width: 45%;
+  height: 210px;
+  display: inline-block;
+  text-align: center;
+  /* border: 5px solid red; */
+  border: 5px solid white;
+}
+
+.hand {
+  background-color: lightgrey;
+  margin: 20px 0px 20px 40px;
+  padding: 20px;
+  width: 46%;
+  height: 150px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+#dealerhand {
+  background-color: black;
+  color: white;
+  margin: 23px 0px 20px 30px;
+  padding: 20px;
+  width: 45%;
+  height: 190px;
+  display: inline-block;
+  font-size: 30px;
+  /* border: 5px solid greenyellow; */
+  border: 5px solid white;
+  vertical-align: top;
+}
+
+#playerhand {
+  background-color: black;
+  color: white;
+  margin: 23px 0px 20px 55px;
+  padding: 20px;
+  width: 45%;
+  height: 190px;
+  display: inline-block;
+  font-size: 30px;
+  /* border: 5px solid greenyellow; */
+  border: 5px solid white;
+  vertical-align: top;
+}
+
+.specialbutton {
+  font-size: 40px;
+  line-height: 80px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 85px 0px 0px 75px;
+  padding: 0 6px;
+  vertical-align: top;
+}
+
+#hit-button {
+  /* background-color: rgb(255, 0, 212); */
+  background-color: blue;
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 40px;
+  line-height: 80px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 40px 0px 0px 95px;
+  padding: 0 6px;
+  vertical-align: top;
+  border: 5px double white;
+}
+
+#stand-button {
+  /* background-color: rgb(255, 0, 212); */
+  background-color: red;
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 40px;
+  line-height: 80px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 40px 0px 0px 60px;
+  padding: 0 6px;
+  vertical-align: top;
+  border: 5px double white;
+}
+
+#rules {
+  background-color: black;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 20px 50px 0px 15px;
+  padding: 7px 7px 7px 7px;
+  max-width: 250px;
+  min-width: 250px;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
 }
