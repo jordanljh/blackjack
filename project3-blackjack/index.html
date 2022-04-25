@@ -59,44 +59,69 @@ The <html> element is known as the root element of a HTML page. All other elemen
         </li>
       </ul>
     </nav>
-    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
-    <h1 id="header">🚀 Basics Project 3: Blackjack 🚀</h1>
-    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
-    <div class="container">
-      <!-- The <p> tag defines a paragraph element. -->
-      <p>Input:</p>
-      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
-      <input id="input-field" />
-      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
-      <br />
-      <!-- The <button> tag represents.. you guessed it! a button. -->
-      <button id="submit-button">Submit</button>
-      <p>Output:</p>
-      <div class="output-div" id="output-div"></div>
+    <h1 id="header">🃏 Basics Project 3: Blackjack 🃏</h1>
+    <div id="rules">
+      <p>Rules:</p>
+      <p>1. Bigger hand value, not exceeding 21, will win.</p>
+      <p>2. Face cards are worth 10, while Ace is worth 1 or 11.</p>
+      <p>3. Hit to draw more cards or stand to stop.</p>
+      <p>4. Dealer will draw when hand is 16 or less</p>
+      <p>5. Blackjack payout 1.5x of bet, all other wins or losses are 1x.</p>
+      <p>6. Game will start with 100 credits and ends with 0 credits.</p>
     </div>
-    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
-    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
-    <!-- The following line imports all code written in the script.js file -->
+    <div class="container">
+      <!-- display blackjack name -->
+      <div id="blackjack">BLACKJACK</div>
+      <!-- display credit and bet -->
+      <div id="credit"></div>
+      <!-- input field to input bet -->
+      <input id="input-field" />
+      <!-- display credit and bet at all times -->
+      <script>
+        var output = document.querySelector("#credit");
+        output.innerHTML = `Credit: <br> 100 <br> Bet: <br> 0`;
+      </script>
+      <!-- to confirm bet -->
+      <button id="bet-button">Bet</button>
+      <!-- instructions output for players to follow -->
+      <div class="output-div" id="instructions"></div>
+      <!-- button to hit -->
+      <button id="hit-button">Hit</button>
+      <!-- disable hit button at the start -->
+      <script>
+        document.querySelector("#hit-button").style.opacity = 0.15;
+        document.querySelector("#hit-button").disabled = true;
+      </script>
+      <!-- button to stand -->
+      <button id="stand-button">Stand</button>
+      <!-- disable stand button at the start -->
+      <script>
+        document.querySelector("#stand-button").style.opacity = 0.15;
+        document.querySelector("#stand-button").disabled = true;
+      </script>
+      <br />
+      <!-- output to display dealer hand -->
+      <div id="dealerhand"></div>
+      <!-- output to display player hand -->
+      <div id="playerhand"></div>
+      <!-- button to restart anytime -->
+      <button id="restart-button">Restart</button>
+      <!-- initial display in instruction output -->
+      <script>
+        var output = document.querySelector("#instructions");
+        output.innerHTML = `Hello there. Nice to meet you. <br> 100 credits has been credited to you. <br> Have fun and may luck be in your favour. <br> <br>Please enter your first bet.`;
+      </script>
+      <!-- initial display for player hand -->
+      <script>
+        var output = document.querySelector("#playerhand");
+        output.innerHTML = "Player Value:";
+      </script>
+      <!-- initial display for dealer hand -->
+      <script>
+        var output = document.querySelector("#dealerhand");
+        output.innerHTML = "Dealer Value:";
+      </script>
+    </div>
     <script src="script.js"></script>
-    <!-- Define button click functionality -->
-    <script>
-      // Declare and define a variable that represents the Submit Button
-      var button = document.querySelector("#submit-button");
-      // When the submit button is clicked, access the text entered by the user in the input field
-      // And pass it as an input parameter to the main function as defined in script.js
-      button.addEventListener("click", function () {
-        // Set result to input value
-        var input = document.querySelector("#input-field");
-        // Store the output of main() in a new variable
-        var result = main(input.value);
-
-        // Display result in output element
-        var output = document.querySelector("#output-div");
-        output.innerHTML = result;
-
-        // Reset input value
-        input.value = "";
-      });
-    </script>
   </body>
 </html>
